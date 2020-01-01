@@ -7,4 +7,4 @@ input a second value from user for example lasName is "Khan"
 
 input a third value from user for example age is "26"</br>
 
-print meassage in alert() Hello Ameen Alam, You are 26 years old</br>
+print meassage in alert() Hello Shariq Khan, You are 26 years old</br>
