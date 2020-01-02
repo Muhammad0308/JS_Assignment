@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>JS Chapter 30-34</title>
+</head>
+
+<body>
+    <script>
+        var name = prompt("Enter Your Name");
+        var date = prompt("Enter Your Date Of Birth");
+        var month = prompt("Enter Your Month Of Birth");
+        var year = prompt("Enter Your Year Of Birth");
+        
+        var Months = ["January", "Febuary", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"]
+        var DOB = new Date(Months[month] + date + ", " + year);
+        console.log(DOB)
+        
+        var currentDate = new Date();
+        var msDiff = currentDate.getTime() - DOB.getTime();
+        var sec = Math.floor(currentDate.getSeconds()- DOB.getSeconds());
+        var minutes =  Math.floor(currentDate.getMinutes()-DOB.getMinutes());
+        var hours = Math.floor(currentDate.getHours() - DOB.getHours());
+        var days = Math.floor (currentDate.getDay() - DOB.getDay());
+        var years = Math.floor(currentDate.getFullYear() - DOB.getFullYear());
+        var months = Math.floor(((msDiff / (1000 * 60 * 60 * 24) / 365) * 12) % 12);
+        console.log("Hello "+name+",you are " + years + " years " + months + " month ", days + " days " + hours + " hours " + minutes + " minutes " + sec + " seconds ");
+
+        var nextYear = currentDate.getFullYear() + 1;
+        console.log(nextYear)
+        var NextDob = new Date(Months[month] + date + ", " + nextYear);
+        console.log(NextDob)
+        var msDiffNext = NextDob.getTime() - currentDate.getTime();
+        var secNext = Math.floor(currentDate.getSeconds()-NextDob.getSeconds());
+        var minutesNext = Math.floor(currentDate.getMinutes()-NextDob.getMinutes());
+        var hoursNext = Math.floor(currentDate.getHours()-NextDob.getHours());
+        var daysNext = Math.floor(NextDob.getDay()-currentDate.getDay());
+        var yearsNext = Math.floor(NextDob.getFullYear()-currentDate.getFullYear());
+        var monthsNext = Math.floor(((msDiffNext / (1000 * 60 * 60 * 24) / 365) * 12) % 12);
+        console.log("Now "+name+","+yearsNext+ " year " +monthsNext + " month ", daysNext + " days " + hoursNext + " hours " + minutesNext + " minutes " + secNext + " seconds, left in your next birthday. ");
+       
+    </script>
+
+    <h3>JS Assignment ch 30 to 34</h3>
+</body>
+
+</html>
