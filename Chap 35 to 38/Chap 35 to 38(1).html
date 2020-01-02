@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Chap 35 to 38</title>
+</head>
+<body>
+    <script>
+        var inputNumber = prompt("Enter a Number here to find factorial?","Like 4,8,17");
+        var factorial = factorialNum(inputNumber);
+        alert(factorial);
+        function factorialNum(inputNumber) {
+            var factorialNum = 1;
+            while(inputNumber !== 1){
+                factorialNum = factorialNum * inputNumber--;
+            }
+            return factorialNum;
+        }
+     </script>
+    <h1>JS Assignment Chapter 35-38</h1>
+    <h1>Factorial A Number By Using Function</h1>
+</body>
+</html>
